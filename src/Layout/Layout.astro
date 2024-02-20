@@ -1,5 +1,11 @@
 ---
 import "../styles/Latout.css";
+interface Props {
+  title:string,
+
+}
+
+const {title} = Astro.props
 ---
 
 <!doctype html>
@@ -7,9 +13,11 @@ import "../styles/Latout.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Astro Landing</title>
+    <title>Astro Landing - {title}</title>
   </head>
   <body>
-    <slot />
+    <main class="mx-auto container">
+      <slot />
+    </main>
   </body>
 </html>

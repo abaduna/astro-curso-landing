@@ -1,11 +1,12 @@
 ---
 import "../styles/Latout.css";
-interface Props {
-  title:string,
+import Foter from "../componets/Foter.astro";
 
+interface Props {
+  title: string;
 }
 
-const {title} = Astro.props
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -16,8 +17,9 @@ const {title} = Astro.props
     <title>Astro Landing - {title}</title>
   </head>
   <body>
-    <main class="mx-auto container">
+    <main class="mx-auto container md:pt-10">
       <slot />
+      <Foter />
     </main>
   </body>
 </html>
